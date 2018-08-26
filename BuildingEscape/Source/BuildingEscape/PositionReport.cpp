@@ -21,10 +21,9 @@ void UPositionReport::BeginPlay()
 	Super::BeginPlay();
 
     FString objectName = GetOwner()->GetName();
-    UE_LOG(LogTemp, Warning, TEXT("teu cu %s"), *objectName);
+    FString objectLocation = GetOwner()->GetActorLocation().ToString();
+    UE_LOG(LogTemp, Warning, TEXT("%s in in %s"), *objectName, *objectLocation);
 
-	// ...
-	
 }
 
 
